@@ -11,49 +11,59 @@
         <!-- Place favicon.ico in the root directory -->
 
         <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
+
         </style>
-        
+        <script type="text/javascript" src="formulaire.js"></script> 
+        <link rel="stylesheet" href="formulaire.css">
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="js/main.js"></script>-->
     </head>
-    <body>        
+    <body>  
+        
+        <div style="width: 60%; margin: 0 auto;">
         <h1>SAISI D'UNE FICHE "PERSONNE"</h1>
       
         <form >
-            <table>
-            <td>
-           <tr> <label for="Nom"> Nom:</label></tr>
+            <table >
+            <tr>
+           <td> <label for="nom"> Nom:</label></td>
            
-            <tr><input type="text" id="nom" name="nom" value=" "> </tr>
-            </td><br>
-            <td>
-           <tr> <label for="Prenom">Prenom:</label></tr>
+            <td><input type="text" id="nom" name="nom" value=" "> </td>
+            </tr>
+            <tr>
+           <td> <label for="Prenom">Prenom:</label></td>
         
-            <tr><input type="text" id="prenom" name="prenom" value=""></tr>
+            <td><input type="text" id="prenom" name="prenom" value=""></td>
         
-            </td><br>
-            <td>
-               <tr> <label for="date">Date de naissance:</label></tr>
-                <tr><input type="date" id="date" name="date" value="" placeholder="JJ/MM/AAAA"></tr><br>
-            </td>
-            <label for="adresse">Adresse:</label><br>
-            <input type="text" id="adresse" name="adresse" value=""><br>
-            <label for="mail">Mail:</label><br>
-            <input type="text" id="mail" name="mail" value=""><br><br>
-            <input type="button" value="Valider"/> 
+            </tr>
+            <tr>
+               <td> <label for="date">Date de naissance:</label></td>
+                <td><input type="date" id="date" name="date" value="" placeholder="JJ/MM/AAAA"></td>
+            </tr>
+            <tr>
+            
+           <td> <label for="adresse">Adresse:</label> </td>
+           <td> <input type="text" id="adresse" name="adresse" value=""></td>
+
+        </tr>
+           
+           <tr>
+            <td><label for="mail">Mail:</label> </td>
+            <td><input type="text" id="mail" name="mail" value=""></td>
+           </tr>
+            
 
 
-        </table>
-
+     </table>
+        
+        <input type="button" value="Valider" onclick="validation()">
           </form>
+
+          <div id="error"> </div> 
+          <div id="resultat"> </div>
+    </div>
+
         
 
 
